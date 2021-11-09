@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route, Switch } from 'react-router-dom'
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom'
 import Navbar from './components/layout/Navbar'
 import Footer from './components/layout/Footer'
 import Alert from './components/layout/Alert'
@@ -19,13 +19,13 @@ function App() {
 
             <main className='container mx-auto px-3 pb-12'>
               <Alert />
-              <Switch>
-                <Route exact path='/' component={Home} />
-                <Route path='/about' component={About} />
-                <Route path='/user/:login' component={User} />
-                <Route path='/notfound' component={NotFound} />
-                <Route component={NotFound} />
-              </Switch>
+              <Routes>
+                <Route path='/' element={<Home />} />
+                <Route path='/about' element={<About />} />
+                <Route path='/user/:login' element={<User />} />
+                <Route path='/notfound' element={<NotFound />} />
+                <Route path='*' element={<NotFound />} />
+              </Routes>
             </main>
 
             <Footer />
