@@ -99,7 +99,7 @@ function User() {
                   <div className='stat-title text-md'>Website</div>
                   <div className='text-lg stat-value'>
                     <a
-                      href={`https://${blog}`}
+                      href={`${blog}`}
                       target='_blank'
                       rel='noreferrer'
                     >
