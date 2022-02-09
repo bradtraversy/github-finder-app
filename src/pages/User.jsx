@@ -28,7 +28,6 @@ function User() {
     avatar_url,
     location,
     bio,
-    blog,
     twitter_username,
     login,
     html_url,
@@ -38,10 +37,21 @@ function User() {
     public_gists,
     hireable,
   } = user
+  let {blog} = user
+
+  const pattern = /^((http|https):\/\/)/;
+
+if( (blog) && !pattern.test(blog)) {
+    blog = "https://" + blog
+}
+
+
 
   if (loading) {
     return <Spinner />
   }
+
+
 
   return (
     <>
