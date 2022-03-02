@@ -9,6 +9,10 @@ import NotFound from './pages/NotFound'
 import { GithubProvider } from './context/github/GithubContext'
 import { AlertProvider } from './context/alert/AlertContext'
 
+// NOTE: Alert is only used on the '/' route moving to that route we can prevent
+// content shift when alert shows by hiding and unhiding the Alert rather than
+// conditionally rendering
+
 function App() {
   return (
     <GithubProvider>
@@ -18,9 +22,16 @@ function App() {
             <Navbar />
 
             <main className='container mx-auto px-3 pb-12'>
-              <Alert />
               <Routes>
-                <Route path='/' element={<Home />} />
+                <Route
+                  path='/'
+                  element={
+                    <>
+                      <Alert />
+                      <Home />
+                    </>
+                  }
+                />
                 <Route path='/about' element={<About />} />
                 <Route path='/user/:login' element={<User />} />
                 <Route path='/notfound' element={<NotFound />} />
