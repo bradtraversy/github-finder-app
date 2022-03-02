@@ -23,7 +23,7 @@ Most likely you have the default light theme provided by DaisyUI. The theme is
 set based on a `prefers-colorscheme` media query, so you may have a light theme
 if you have a light browser theme or OS theme. In which case you won't see the
 text in the alert show.
-Code changes to fix this can be seen in [Alert.jsx](src/layout/Alert.jsx)
+Code changes to fix this can be seen in [Alert.jsx](src/components/layout/Alert.jsx)
 The changes here use a [ DaisyUI Alert component ](https://daisyui.com/components/alert/) so will adapt with a change in theme.
 We also now conditionally set the element visibility to **'visible'** or
 **'hidden'** rather than conditionally render, which prevents content shift when
