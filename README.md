@@ -42,7 +42,12 @@ If it's at version 5 or greater then follow the [ Tailwind version 3 ](https://t
 
 If react-scripts is at version 4 then follow the [ Tailwind version 2 ](https://v2.tailwindcss.com/docs/guides/create-react-app) docs to setup, which is what you see Brad doing in the course.
 
-Hope that helps.
+#### BUG: Linking to users websites
+
+Some users from Github have already prefixed their websites with `http://` or
+`https://` so we need to check in [User.jsx](src/pages/User.jsx) if their
+website url starts with `http` before constructing the external link.
+Code changes can be see in [User.jsx](src/pages/User.jsx#L48)
 
 ---
 

@@ -43,6 +43,10 @@ function User() {
     return <Spinner />
   }
 
+  // NOTE: check for valid url to users website
+
+  const websiteUrl = blog?.startsWith('http') ? blog : 'https://' + blog
+
   // NOTE: code here has been fixed so that stats no longer show scroll bar on
   // mobile / small devices
   // https://www.udemy.com/course/react-front-to-back-2022/learn/lecture/29768968#questions/16902278
@@ -102,12 +106,8 @@ function User() {
                 <div className='stat'>
                   <div className='stat-title text-md'>Website</div>
                   <div className='text-lg stat-value'>
-                    <a
-                      href={`https://${blog}`}
-                      target='_blank'
-                      rel='noreferrer'
-                    >
-                      {blog}
+                    <a href={websiteUrl} target='_blank' rel='noreferrer'>
+                      {websiteUrl}
                     </a>
                   </div>
                 </div>
