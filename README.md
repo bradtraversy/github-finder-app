@@ -29,6 +29,21 @@ We also now conditionally set the element visibility to **'visible'** or
 **'hidden'** rather than conditionally render, which prevents content shift when
 the alert shows for a smoother UX.
 
+#### Q: Why doesn't Craco work?
+
+You don't need to use craco if you are using react-scripts version 5 or greater.
+
+When Brad recorded the course react-scripts was at version 4 and didn't support postcss, now react-scripts is at version 5 and does support postcss.
+So just check what version of react-scripts you have...
+
+    npm list react-scripts
+
+If it's at version 5 or greater then follow the [ Tailwind version 3 ](https://tailwindcss.com/docs/guides/create-react-app) docs to setup.
+
+If react-scripts is at version 4 then follow the [ Tailwind version 2 ](https://v2.tailwindcss.com/docs/guides/create-react-app) docs to setup, which is what you see Brad doing in the course.
+
+Hope that helps.
+
 ---
 
 ## Usage
