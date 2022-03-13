@@ -27,7 +27,7 @@ Then run the project using the Netlify CLI
 netlify dev
 ```
 
-> **Code Changes** for this branch can be seen in [src/context/GithubActions.js](src/context/GithubActions.js) and in the [functions](functions) directory.
+> **Code Changes** for this branch can be seen in [src/context/github/GithubActions.js](src/context/github/GithubActions.js) and in the [functions](functions) directory.
 >
 > Configuration for Netlify can be seen in [netlify.toml](netlify.toml)
 
