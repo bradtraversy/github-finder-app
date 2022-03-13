@@ -5,6 +5,7 @@ exports.handler = async function (event) {
   const response = await github.get(`/search/users?${params}`)
   return {
     statusCode: 200,
+    headers: { 'Content-Type': 'application/json' },
     body: JSON.stringify(response.data.items),
   }
 }

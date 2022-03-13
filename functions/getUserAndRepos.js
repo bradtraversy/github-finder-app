@@ -9,6 +9,7 @@ exports.handler = async function (event) {
   ])
 
   return {
+    headers: { 'Content-Type': 'application/json' },
     statusCode: 200,
     body: JSON.stringify({ user: user.data, repos: repos.data }),
   }
