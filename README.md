@@ -7,8 +7,8 @@ This branch of the repository has been refactored to use [ Netlify serverless fu
 to be able to _proxy_ requests to the Github API, this allows you to keep your Github access token secret.
 
 Any env variable you set in a React app prefixed **REACT_APP** is exposed to the
-client in the build. So anyone inspecting the Network Requests for you app will
-be able to see your token and use it.
+client in the build. So anyone inspecting the Network Requests for your app will
+be able to see your token and use potentially use it.
 
 Netlify functions run server side so are not exposed to the client. We can
 make our client side requests to our **/api/<function_name>** end point and then in
