@@ -49,6 +49,17 @@ Some users from Github have already prefixed their websites with `http://` or
 website url starts with `http` before constructing the external link.
 Code changes can be see in [User.jsx](src/pages/User.jsx#L48)
 
+#### BUG: Light theme RepoItem background is too dark
+
+The theme is set based on a `prefers-colorscheme` media query, so you may have a light theme
+if you have a light browser theme or OS theme.
+When the browser's preferred color scheme is light, the gray background is too dark on the RepoItem component, and the content is not visible.
+
+Using `base-200` and `base-300` backgrounds, will make the component's background change according to the browser's preference.
+
+> Code changes can be seen in
+> [RepoItem.jsx](src/components/repos/RepoItem.jsx#L17)
+
 ---
 
 ## Usage
