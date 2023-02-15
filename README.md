@@ -34,6 +34,17 @@ netlify dev
 For running in production then deploy from git in Netlify and link to your
 Github repository, make sure to add a GITHUB_TOKEN env variable in Netlify.
 
+#### BUG: Light theme RepoItem background is too dark
+
+The theme is set based on a `prefers-colorscheme` media query, so you may have a light theme
+if you have a light browser theme or OS theme.
+When the browser's preferred color scheme is light, the gray background is too dark on the RepoItem component, and the content is not visible.
+
+Using `base-200` and `base-300` backgrounds, will make the component's background change according to the browser's preference.
+
+> Code changes can be seen in
+> [RepoItem.jsx](src/components/repos/RepoItem.jsx#L17)
+
 ---
 
 ## Usage

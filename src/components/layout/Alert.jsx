@@ -2,7 +2,7 @@ import { useContext } from 'react'
 import AlertContext from '../../context/alert/AlertContext'
 
 // NOTE: here we are using the alert component from DaisyUI which works better
-// with DaisyUI themes. If you have the Light theme from DaisyUI and can't se
+// with DaisyUI themes. If you have the Light theme from DaisyUI and can't see
 // the text in the alert then this is the change you need.
 // We also now conditionally hide the containing div rather than conditionally
 // render the alert, this prevents content shift when the alert shows.
