@@ -18,6 +18,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "prebuild": "cd functions && npm i",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
