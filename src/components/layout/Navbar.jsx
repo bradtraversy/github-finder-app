@@ -1,6 +1,7 @@
 import { FaGithub } from 'react-icons/fa'
 import { Link } from 'react-router-dom'
 import PropTypes from 'prop-types'
+import ThemeChanger from '../theme-changer/ThemeChanger'
 
 function Navbar({ title }) {
   return (
@@ -21,6 +22,7 @@ function Navbar({ title }) {
             <Link to='/about' className='btn btn-ghost btn-sm rounded-btn'>
               About
             </Link>
+            <ThemeChanger />
           </div>
         </div>
       </div>
